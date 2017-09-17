@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+    <h1 th:text="${title}">Title Goes Here</h1>
+
+    <form method="post" th:object="${category}">
+        <div class="form-group">
+            <label th:for="name">New Category:</label>
+            <input class="form-control" th:field="*{name}" />
+            <span th:errors="*{name}" class="error"></span>
+        </div>
+
+        <input type="submit" value="Add New Category" />
+    </form>
+</body>
+</html>
