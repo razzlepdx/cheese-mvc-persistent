@@ -69,6 +69,8 @@ public class CheeseController {
     @RequestMapping(value = "remove", method = RequestMethod.POST)
     public String processRemoveCheeseForm(@RequestParam int[] cheeseIds) {
 
+
+
         for (int cheeseId : cheeseIds) {
             cheeseDao.delete(cheeseId);
         }
